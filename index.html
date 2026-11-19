@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e8e8e4">
+  <meta name="description" content="Descubre cuatro clásicos de la cocina peruana en una experiencia gastronómica interactiva de Codea con Horacio.">
+  <title>Table — Sabores extraordinarios del Perú</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z"/></symbol>
+    <symbol id="fork" viewBox="0 0 24 24"><path d="M4 3v6a3 3 0 0 0 6 0V3M7 3v18M19 3c-4 3-5 8 0 9v9M19 3v9"/></symbol>
+    <symbol id="glass" viewBox="0 0 24 24"><path d="m4 3 8 10 8-10H4ZM12 13v8M7 21h10"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </defs></svg>
+  <main class="experience" id="experience">
+    <div class="ambient" aria-hidden="true"><div class="orbit"></div><div class="ambient-light"></div><span class="fine-circle"></span></div>
+    <header class="header">
+      <a class="brand" href="index.html" aria-label="Inicio de Table"><svg class="icon"><use href="#fork"/></svg><span>table<span class="brand-dot">.</span></span></a>
+      <span class="header-note">BUENA COMIDA. BUENOS MOMENTOS.</span>
+      <nav class="header-actions" aria-label="Navegación principal"><span class="edition">SABORES DEL PERÚ — 2026</span><button class="icon-button" id="search-button" aria-label="Buscar platos"><svg class="icon"><use href="#search"/></svg></button><button class="icon-button" id="menu-button" aria-label="Abrir la carta"><svg class="icon"><use href="#menu"/></svg></button></nav>
+    </header>
+    <div class="side-note" aria-hidden="true"><span>RECIÉN PREPARADO</span><i></i><span>SERVIDO CON CARIÑO</span></div>
+    <section class="food-stage" id="food-stage" aria-label="Fotografías de los platos destacados"></section>
+    <section class="hero-copy" aria-label="Plato destacado">
+      <div class="eyebrow"><span class="tiny-line"></span><span id="dish-number">01</span><span> / LA SELECCIÓN DEL CHEF</span></div>
+      <h1 id="dish-title"><span class="title-mask"><span id="title-first">Ceviche</span></span><span class="title-mask"><strong id="title-second">Clásico</strong></span></h1>
+      <p class="dish-tagline" id="dish-tagline">El mar peruano, en cada bocado.</p>
+      <div class="hero-actions"><button class="play-button" id="play-button"><span class="play-circle">▶</span>Ver video<span class="action-duration">0:12</span></button><button class="order-button" id="order-button"><svg class="icon"><use href="#bag"/></svg>Pedir este plato<span>↗</span></button></div>
+    </section>
+    <aside class="info-panel" aria-label="Información del plato">
+      <div class="tabs" role="tablist" aria-label="Detalles del plato"><button id="overview-tab" role="tab" aria-controls="overview" aria-selected="true" tabindex="0">El plato</button><button id="ingredients-tab" role="tab" aria-controls="ingredients" aria-selected="false" tabindex="-1">Ingredientes</button></div>
+      <div class="panel-content" id="panel-content">
+        <div id="overview" role="tabpanel" aria-labelledby="overview-tab"><div class="rating-row"><div class="rating-badge"><span id="rating">4.9</span><span class="rating-star">★</span></div><div class="rating-caption"><span class="stars">★★★★★</span><span>Entre los favoritos</span></div></div><span class="panel-label">QUIEN LE DA SABOR</span><h2 id="chef">Chef Lucía</h2><p class="chef-role" id="chef-role">Inspiración en la costa peruana</p><p class="description" id="description"></p><div class="dish-meta"><span id="prep-time">20 min</span><span id="diet">Pescado fresco</span></div></div>
+        <div id="ingredients" role="tabpanel" aria-labelledby="ingredients-tab" hidden><span class="panel-label">BUENOS INGREDIENTES, GRAN SABOR</span><h2>Lo que lleva</h2><ul id="ingredient-list"></ul><p class="allergen-note" id="allergen-note"></p></div>
+      </div>
+      <div class="panel-bottom"><button id="favorite-button" aria-pressed="false"><svg class="icon"><use href="#heart"/></svg><span>Guardar favorito</span></button><span class="panel-index" id="panel-index">01 / 04</span></div>
+    </aside>
+    <section class="selector-section" aria-label="Explorar la carta">
+      <div class="selector-heading"><span>DESCUBRE TU PRÓXIMO FAVORITO</span><span class="drag-hint">⟷ &nbsp; Arrastra para explorar</span></div>
+      <div class="selector-controls"><button class="arrow-button previous" id="previous" aria-label="Plato anterior"><svg class="icon"><use href="#arrow"/></svg></button><div class="selector-viewport" id="selector" role="group" aria-label="Selector de platos. Arrastra horizontalmente o usa las flechas del teclado." tabindex="0"><div class="selector-track" id="selector-track"></div></div><button class="arrow-button" id="next" aria-label="Siguiente plato"><svg class="icon"><use href="#arrow"/></svg></button></div>
+      <div class="progress-line" aria-hidden="true"><span id="progress-fill"></span></div>
+    </section>
+    <div class="chapter" aria-hidden="true"><span id="chapter-current">01</span><i></i><span>04</span></div>
+    <footer class="footer"><nav class="footer-nav" aria-label="Explorar Table"><button class="footer-button active" id="food-button" aria-label="Explorar platos"><svg class="icon"><use href="#fork"/></svg></button><button class="footer-button" id="pairing-button" aria-label="Bebida para acompañar"><svg class="icon"><use href="#glass"/></svg></button><button class="footer-button" id="saved-button" aria-label="Platos guardados"><svg class="icon"><use href="#heart"/></svg></button><button class="footer-button" id="about-button" aria-label="Acerca de esta experiencia"><svg class="icon"><use href="#info"/></svg></button></nav><span class="footer-manifesto">Hecho con cariño. <em>Disfrútalo sin prisa.</em></span><span class="credit">Una experiencia de <strong>Codea con Horacio</strong><span class="credit-mark">↗</span></span></footer>
+    <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+  </main>
+  <dialog id="modal"><div class="modal-top"><span class="panel-label" id="modal-label">TABLE / LA CARTA</span><button class="icon-button" id="modal-close" aria-label="Cerrar ventana"><svg class="icon"><use href="#close"/></svg></button></div><div id="modal-body"></div></dialog>
+  <script>document.documentElement.classList.add('js');</script>
+</body>
+</html>
